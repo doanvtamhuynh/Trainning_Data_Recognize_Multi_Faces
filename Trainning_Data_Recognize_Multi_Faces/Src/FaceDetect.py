@@ -22,8 +22,7 @@ while True:
         count += 1
 
         path = os.path.abspath(os.path.join(os.getcwd(), '..'))
-        abc = cv2.imwrite(path + "/DataSet/User" + str(face_id) + '' + str(count) + ".jpg", gray[y:y+h,x:x+w])
-        print(abc)
+        cv2.imwrite(path + "/DataSet/User." + str(face_id) + '.' + str(count) + ".jpg", gray[y:y+h,x:x+w])
         cv2.imshow('image', img)
 
     k = cv2.waitKey(100) & 0xff
